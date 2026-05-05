@@ -5,57 +5,138 @@
   <meta name="google-site-verification" content="melSTt8Q5v_zy3o2KRThhUBh5J3QLrk6dzRnIX7Sj9c" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bhambu Digital Hub | WhatsApp Chatbot & Automation Services</title>
+  <title>Bhambu Digital Hub | WhatsApp Automation Agency</title>
 
-  <meta name="description" content="Bhambu Digital Hub provides WhatsApp chatbot setup, auto reply system, and business automation services to generate leads and grow business.">
-
-  <meta name="keywords" content="WhatsApp chatbot, WhatsApp automation, business WhatsApp bot, lead generation, auto reply system">
-
+  <meta name="description" content="Bhambu Digital Hub helps businesses automate customer support, lead generation and sales with WhatsApp chatbots and business automation.">
+  <meta name="keywords" content="WhatsApp chatbot, WhatsApp automation, lead generation, business automation, international clients">
   <meta name="author" content="Bhambu Digital Hub">
   <meta name="robots" content="index, follow">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+    * {
       margin: 0;
-      background: #f4f4f4;
-      color: #111;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
     }
 
     header {
-      background: #111;
-      color: white;
-      padding: 20px;
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #1c1c1c);
     }
 
-    .box {
-      padding: 20px;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
       max-width: 700px;
-      margin: 0 auto;
+      margin: auto;
     }
 
-    ul li {
-      background: white;
-      margin: 10px auto;
-      padding: 12px;
-      width: 90%;
-      border-radius: 8px;
+    .lang-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 999;
     }
 
     .btn {
+      display: inline-block;
+      margin: 15px 10px 0;
+      padding: 14px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
       background: #25D366;
       color: white;
-      padding: 12px 18px;
-      border-radius: 30px;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #25D366;
+      color: #25D366;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #25D366;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .stats {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #25D366;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .socials a {
+      color: #25D366;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 15px;
+      margin: 0 10px;
     }
 
     .float {
@@ -64,40 +145,100 @@
       right: 20px;
       background: #25D366;
       color: white;
+      text-decoration: none;
       padding: 14px 18px;
       border-radius: 50px;
-      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Bhambu Digital Hub</h1>
-    <p>WhatsApp Chatbot & Business Automation Services</p>
-  </header>
+<button class="lang-btn" onclick="toggleLanguage()">हिं / ENG</button>
 
-  <div class="box">
-    <h2>Our Services</h2>
+<header>
+  <h1 id="hero-title">Automate Your Business with WhatsApp</h1>
+  <p id="hero-text">We help businesses automate customer support, lead generation and sales with smart WhatsApp chatbot systems.</p>
+  <a class="btn btn-primary" id="hero-btn1" href="https://wa.me/919783099290?text=Hi%20I%20want%20a%20free%20WhatsApp%20automation%20demo" target="_blank">Book Free Demo</a>
+  <a class="btn btn-secondary" id="hero-btn2" href="https://instagram.com/bhambu_digital_hub" target="_blank">Follow on Instagram</a>
+</header>
 
-    <ul>
-      <li>WhatsApp Chatbot Setup</li>
-      <li>Auto Reply System</li>
-      <li>Lead Generation Automation</li>
-      <li>Business WhatsApp Integration</li>
-    </ul>
-
-    <h2>Start Your Business Automation</h2>
-
-    <a class="btn" href="https://wa.me/919783099290?text=Hi%20I%20want%20WhatsApp%20bot%20for%20my%20business" target="_blank">
-      Contact on WhatsApp
-    </a>
+<section>
+  <h2 id="services-title">Our Services</h2>
+  <div class="grid">
+    <div class="card"><h3>WhatsApp Chatbot</h3><p id="s1">Smart chatbot setup for instant replies and automated support.</p></div>
+    <div class="card"><h3>Auto Reply System</h3><p id="s2">24/7 automatic responses so you never miss a lead.</p></div>
+    <div class="card"><h3>Lead Automation</h3><p id="s3">Capture leads automatically and improve conversion.</p></div>
+    <div class="card"><h3>Business Integration</h3><p id="s4">Connect WhatsApp with forms, CRM and automation tools.</p></div>
   </div>
+</section>
 
-  <a class="float" href="https://wa.me/919783099290?text=Hi%20I%20need%20details%20about%20Bhambu%20Digital%20Hub" target="_blank">
-    💬 Chat
-  </a>
+<section>
+  <h2 id="why-title">Why Choose Us</h2>
+  <div class="grid">
+    <div class="card"><h3>Fast Setup</h3><p id="w1">Quick implementation with minimal downtime.</p></div>
+    <div class="card"><h3>24/7 Support</h3><p id="w2">Reliable support whenever your business needs help.</p></div>
+    <div class="card"><h3>Affordable</h3><p id="w3">High-value automation at business-friendly pricing.</p></div>
+    <div class="card"><h3>Custom Solutions</h3><p id="w4">Tailored workflows built for your business goals.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 id="results-title">Client Results</h2>
+  <div class="grid">
+    <div class="card stats">80% Faster Response Time</div>
+    <div class="card stats">3x More Lead Capture</div>
+    <div class="card stats">24/7 Customer Handling</div>
+  </div>
+</section>
+
+<section>
+  <h2 id="global-title">Serving Clients Globally</h2>
+  <div class="card" style="text-align:center;">
+    <p id="global-text">We work with businesses in India and international markets to automate customer communication and increase conversions.</p>
+  </div>
+</section>
+
+<section style="text-align:center;">
+  <h2 id="cta-title">Ready to Automate Your Business?</h2>
+  <a class="btn btn-primary" id="cta-btn" href="https://wa.me/919783099290?text=Hi%20I%20want%20to%20automate%20my%20business" target="_blank">Automate My Business</a>
+</section>
+
+<footer>
+  <p id="footer-text">© 2026 Bhambu Digital Hub | WhatsApp Automation Agency</p>
+  <div class="socials">
+    <a href="https://instagram.com/bhambu_digital_hub" target="_blank">Instagram</a>
+    <a href="mailto:anilbhambu56@gmail.com">anilbhambu56@gmail.com</a>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/919783099290?text=Hi%20I%20need%20details%20about%20Bhambu%20Digital%20Hub" target="_blank">💬 Chat</a>
+
+<script>
+  let hindi = false;
+
+  function toggleLanguage() {
+    hindi = !hindi;
+
+    if (hindi) {
+      document.getElementById("hero-title").innerText = "WhatsApp से अपने बिजनेस को ऑटोमेट करें";
+      document.getElementById("hero-text").innerText = "हम आपके बिजनेस के लिए WhatsApp chatbot, lead generation और customer support automation सेटअप करते हैं।";
+      document.getElementById("hero-btn1").innerText = "Free Demo बुक करें";
+      document.getElementById("hero-btn2").innerText = "Instagram पर Follow करें";
+      document.getElementById("services-title").innerText = "हमारी सेवाएं";
+      document.getElementById("why-title").innerText = "हमें क्यों चुनें";
+      document.getElementById("results-title").innerText = "Client Results";
+      document.getElementById("global-title").innerText = "हम Global Clients के साथ काम करते हैं";
+      document.getElementById("global-text").innerText = "हम India और international businesses के लिए automation solutions provide करते हैं।";
+      document.getElementById("cta-title").innerText = "क्या आप अपना बिजनेस ऑटोमेट करना चाहते हैं?";
+      document.getElementById("cta-btn").innerText = "मेरा बिजनेस ऑटोमेट करें";
+      document.getElementById("footer-text").innerText = "© 2026 Bhambu Digital Hub | WhatsApp Automation Agency";
+    } else {
+      location.reload();
+    }
+  }
+</script>
 
 </body>
 </html>
