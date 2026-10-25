@@ -1,115 +1,152 @@
-background: #111;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    .socials a {
-      color: #25D366;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    }
-  </style>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070914">
+<meta name="description" content="Bhambu Digital Hub helps businesses streamline customer conversations with WhatsApp automation, chatbot setup and lead workflows.">
+<title>Bhambu Digital Hub | Smart Automation for Your Business</title>
+<style>
+:root{color-scheme:dark;--bg:#070914;--panel:#0d1224;--line:#222b49;--text:#f6f7ff;--muted:#aab4d0;--purple:#a855f7;--blue:#3987ff;--green:#19d985}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 78% 12%,rgba(92,40,210,.22),transparent 35%),radial-gradient(ellipse at 12% 38%,rgba(25,120,255,.10),transparent 34%),var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,9,20,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(140,155,220,.15)}
+.navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.08em;line-height:1.1}
+.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--blue));font-size:15px;box-shadow:0 0 25px #743bdb55}
+.brand small{display:block;color:#b6bfd9;font-size:10px;letter-spacing:.22em;margin-top:4px}
+.links{display:flex;align-items:center;gap:24px;color:#c6cce0;font-size:13px}
+.links a:hover{color:#fff}
+.navactions{display:flex;align-items:center;gap:10px}
+.lang,.menu{background:#12182b;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:white;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:14px;font-weight:750;font-size:14px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(100deg,#12c978,#00e5a0);color:#04180f;box-shadow:0 8px 28px #00df8930}
+.secondary{border:1px solid #8c5bff;background:#0c1020}
+.hero{padding:78px 0 68px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;min-height:530px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #344064;background:#10172b;border-radius:99px;padding:7px 13px;color:#cdd6f4;font-size:12px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+h1{font-size:clamp(42px,5.3vw,68px);line-height:1.03;letter-spacing:-.045em;margin:20px 0}
+.gradient{background:linear-gradient(95deg,#c084fc 5%,#638dff 65%,#4dd8f4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;color:var(--muted);max-width:560px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.trust{display:flex;gap:18px;flex-wrap:wrap;color:#b7c0dc;font-size:12px;margin-top:28px}
+.trust span{display:flex;gap:8px;align-items:center}
+.check{color:#8d70ff;font-size:18px}
+.visual{position:relative;min-height:390px;display:grid;place-items:center}
+.glow{position:absolute;width:310px;height:310px;border-radius:50%;background:#6531e8;filter:blur(95px);opacity:.38}
+.phone{position:relative;width:min(285px,82%);padding:12px;border:1px solid #6575b8;border-radius:32px;background:linear-gradient(150deg,#18243d,#090d19 65%);box-shadow:0 0 0 7px #11182a,0 0 65px #6941f899;transform:rotate(4deg)}
+.screen{border-radius:22px;overflow:hidden;background:#edf3fb;color:#18213b;min-height:330px}
+.screenhead{background:#0b7b60;color:white;padding:18px 15px;font-weight:800}
+.online{font-size:11px;font-weight:500;opacity:.85}
+.chat{padding:15px;display:grid;gap:12px}
+.bubble{background:white;padding:11px 12px;border-radius:13px 13px 13px 4px;font-size:12px;box-shadow:0 4px 15px #18213b0e}
+.bubble.user{margin-left:30px;background:#d7f8df;border-radius:13px 13px 4px 13px}
+.quick{display:flex;gap:5px;flex-wrap:wrap}
+.quick span{border:1px solid #b7c7d8;border-radius:99px;padding:5px 8px;font-size:10px;background:#fff}
+.floatcard{position:absolute;background:#10172a;border:1px solid #35446d;border-radius:16px;padding:14px 16px;box-shadow:0 16px 40px #0006;font-size:12px}
+.floatcard strong{display:block;font-size:13px;margin-bottom:5px}
+.floatcard.left{left:0;top:65px}.floatcard.right{right:-4px;bottom:50px}
+.purpledot{color:#c084fc}.green{color:var(--green)}
+section{padding:66px 0;border-top:1px solid rgba(140,155,220,.13)}
+.sectiontop{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+.kicker{color:#b68bff;text-transform:uppercase;letter-spacing:.17em;font-size:11px;font-weight:850}
+h2{font-size:clamp(28px,3vw,39px);line-height:1.13;letter-spacing:-.03em;margin:8px 0 0}
+.sub{color:var(--muted);max-width:420px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:linear-gradient(150deg,rgba(18,26,48,.94),rgba(9,13,27,.95));border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:#7656ce}
+.ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#38236e,#153b74);font-size:21px;margin-bottom:16px}
+.card h3{margin:0 0 8px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stepno{color:#b58aff;font-size:12px;font-weight:850;letter-spacing:.1em}
+.step h3{margin:8px 0 6px}.step p{color:var(--muted);font-size:13px;margin:0}
+.cta{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:35px;border:1px solid #514083;border-radius:24px;background:radial-gradient(ellipse at 90% 0%,#5125a64d,transparent 45%),linear-gradient(120deg,#11172b,#0b1020)}
+.cta p{color:var(--muted);margin:8px 0 0;max-width:580px}
+footer{padding:28px 0 90px;color:#8f9ab8;font-size:12px}
+.footin{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);padding-top:22px}
+.socials{display:flex;gap:18px;flex-wrap:wrap}
+.socials a:hover{color:white}
+.floating{position:fixed;right:18px;bottom:18px;z-index:25;box-shadow:0 8px 28px #00df8933}
+.note{font-size:11px;color:#7e8aa8;margin-top:18px}
+.menu{display:none}
+@media(max-width:850px){.links{gap:13px}.hero{gap:25px;padding-top:55px}.grid{grid-template-columns:repeat(2,1fr)}.floatcard.left{left:-5px}.floatcard.right{right:-5px}}
+@media(max-width:640px){.navin{min-height:64px}.links{display:none;position:absolute;top:64px;left:0;right:0;background:#090d1b;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.navactions .primary{display:none}.hero{grid-template-columns:1fr;padding:48px 0 38px;gap:12px}.visual{min-height:360px}.floatcard.left{left:0;top:35px}.floatcard.right{right:0;bottom:22px}.sectiontop{display:block}.sub{margin-top:12px}.grid,.steps{grid-template-columns:1fr 1fr}.card{padding:17px}.cta{padding:24px;display:block}.cta .btn{margin-top:20px}.footin{align-items:flex-start;flex-direction:column}h1{font-size:46px}}
+@media(max-width:390px){.grid,.steps{grid-template-columns:1fr}.trust{gap:10px}.hero{padding-top:35px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
 </head>
 <body>
-
-<button class="lang-btn" onclick="toggleLanguage()">हिं / ENG</button>
-
-<header>
-  <h1 id="hero-title">Automate Your Business with WhatsApp</h1>
-  <p id="hero-text">We help businesses automate customer support, lead generation and sales with smart WhatsApp chatbot systems.</p>
-  <a class="btn btn-primary" id="hero-btn1" href="https://wa.me/919783099290?text=Hi%20I%20want%20a%20free%20WhatsApp%20automation%20demo" target="_blank">Book Free Demo</a>
-  <a class="btn btn-secondary" id="hero-btn2" href="https://instagram.com/bhambu_digital_hub" target="_blank">Follow on Instagram</a>
-</header>
-
-<section id="services">
-  <h2 id="services-title">Our Services</h2>
+<nav>
+  <div class="wrap navin">
+    <a class="brand" href="#home" aria-label="Bhambu Digital Hub home"><span class="logo">BDH</span><span>BHAMBU<small>DIGITAL HUB</small></span></a>
+    <div class="links" id="navlinks"><a href="#home" data-en="Home" data-hi="होम">Home</a><a href="#services" data-en="Services" data-hi="सेवाएं">Services</a><a href="#process" data-en="How it works" data-hi="कैसे काम करता है">How it works</a><a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a></div>
+    <div class="navactions"><button class="lang" id="langBtn" type="button" aria-label="Switch language">हिंदी</button><a class="btn primary" href="https://wa.me/919783099290?text=Hi%20Bhambu%20Digital%20Hub%2C%20I%27d%20like%20to%20discuss%20automation." target="_blank" rel="noopener noreferrer">◉ <span data-en="Chat on WhatsApp" data-hi="WhatsApp पर बात करें">Chat on WhatsApp</span> ↗</a><button class="menu" id="menuBtn" type="button" aria-label="Open menu">☰</button></div>
+  </div>
+</nav>
+<main>
+<div class="wrap hero" id="home">
+  <div>
+    <span class="eyebrow"><span class="dot"></span><span data-en="AUTOMATE · GROW · SUCCEED" data-hi="ऑटोमेशन · ग्रोथ · सफलता">AUTOMATE · GROW · SUCCEED</span></span>
+    <h1 data-en="Smart automation for your <span class='gradient'>business.</span>" data-hi="अपने बिजनेस को बनाएं <span class='gradient'>स्मार्ट।</span>">Smart automation for your <span class="gradient">business.</span></h1>
+    <p class="lead" data-en="Make customer conversations simpler with WhatsApp chatbot setup, quick replies and practical lead workflows—so you can focus on running your business." data-hi="WhatsApp chatbot, quick replies और lead workflows से ग्राहकों से बातचीत आसान बनाएं—ताकि आप अपने बिजनेस पर ध्यान दे सकें।">Make customer conversations simpler with WhatsApp chatbot setup, quick replies and practical lead workflows—so you can focus on running your business.</p>
+    <div class="actions"><a class="btn primary" href="https://wa.me/919783099290?text=Hi%20I%20want%20to%20discuss%20a%20free%20automation%20demo" target="_blank" rel="noopener noreferrer" data-en="↗  Discuss your project" data-hi="↗  अपने प्रोजेक्ट पर बात करें">↗ Discuss your project</a><a class="btn secondary" href="#services" data-en="Explore services ↓" data-hi="सेवाएं देखें ↓">Explore services ↓</a></div>
+    <div class="trust"><span><b class="check">✦</b><span data-en="Built around your workflow" data-hi="आपके काम के अनुसार">Built around your workflow</span></span><span><b class="check">◈</b><span data-en="Clear, practical setup" data-hi="आसान और स्पष्ट सेटअप">Clear, practical setup</span></span></div>
+  </div>
+  <div class="visual" aria-label="Illustration of an automated customer chat">
+    <div class="glow"></div>
+    <div class="floatcard left"><strong><span class="purpledot">✦</span> Smart replies</strong><span data-en="Less repetitive typing" data-hi="बार-बार टाइपिंग कम">Less repetitive typing</span></div>
+    <div class="phone"><div class="screen"><div class="screenhead">● Your Business <div class="online">Online · Quick support</div></div><div class="chat"><div class="bubble" data-en="Hi there! 👋 How can we help your business today?" data-hi="नमस्ते! 👋 आज आपके बिजनेस में कैसे मदद करें?">Hi there! 👋 How can we help your business today?</div><div class="quick"><span>Services</span><span>Pricing</span><span>Talk to us</span></div><div class="bubble user" data-en="I want to automate customer replies." data-hi="मुझे customer replies automate करने हैं।">I want to automate customer replies.</div><div class="bubble" data-en="Great! Tell us about your workflow and we’ll suggest a suitable setup." data-hi="बढ़िया! अपने काम के बारे में बताएं, हम सही सेटअप सुझाएंगे।">Great! Tell us about your workflow and we’ll suggest a suitable setup.</div></div></div></div>
+    <div class="floatcard right"><strong><span class="green">✓</span> <span data-en="A smoother workflow" data-hi="आसान वर्कफ़्लो">A smoother workflow</span></strong><span data-en="Replies · Leads · Support" data-hi="जवाब · लीड्स · सपोर्ट">Replies · Leads · Support</span></div>
+  </div>
+</div>
+<section id="services"><div class="wrap">
+  <div class="sectiontop"><div><div class="kicker" data-en="WHAT WE DO" data-hi="हम क्या करते हैं">WHAT WE DO</div><h2 data-en="Digital solutions for <span class='gradient'>modern business.</span>" data-hi="आज के बिजनेस के लिए <span class='gradient'>डिजिटल समाधान।</span>">Digital solutions for <span class="gradient">modern business.</span></h2></div><p class="sub" data-en="Practical tools to help you manage conversations, respond consistently and organize incoming leads." data-hi="ग्राहकों से बातचीत, समय पर जवाब और आने वाली लीड्स को व्यवस्थित करने के लिए उपयोगी टूल्स।">Practical tools to help you manage conversations, respond consistently and organize incoming leads.</p></div>
   <div class="grid">
-    <div class="card"><h3>WhatsApp Chatbot</h3><p id="s1">Smart chatbot setup for instant replies and automated support.</p></div>
-    <div class="card"><h3>Auto Reply System</h3><p id="s2">24/7 automatic responses so you never miss a lead.</p></div>
-    <div class="card"><h3>Lead Automation</h3><p id="s3">Capture leads automatically and improve conversion.</p></div>
-    <div class="card"><h3>Business Integration</h3><p id="s4">Connect WhatsApp with forms, CRM and automation tools.</p></div>
+    <article class="card"><div class="ico">◉</div><h3>WhatsApp Chatbots</h3><p data-en="Guide customers to common answers, services and next steps with a structured chat flow." data-hi="सही chat flow से ग्राहकों को आम जवाब, सेवाओं और अगले कदम तक पहुंचाएं।">Guide customers to common answers, services and next steps with a structured chat flow.</p></article>
+    <article class="card"><div class="ico">↯</div><h3>Quick Replies & Auto Replies</h3><p data-en="Create consistent responses for frequent questions and routine enquiries." data-hi="बार-बार पूछे जाने वाले सवालों के लिए एक जैसे और तेज जवाब तैयार करें।">Create consistent responses for frequent questions and routine enquiries.</p></article>
+    <article class="card"><div class="ico">◎</div><h3>Lead Workflows</h3><p data-en="Organize enquiry details and help your team follow up with potential customers." data-hi="पूछताछ की जानकारी व्यवस्थित करें और ग्राहकों से follow-up करना आसान बनाएं।">Organize enquiry details and help your team follow up with potential customers.</p></article>
+    <article class="card"><div class="ico">⌘</div><h3>Business Integrations</h3><p data-en="Connect suitable forms, spreadsheets and supported tools to reduce manual steps." data-hi="manual काम कम करने के लिए उपयुक्त forms, spreadsheets और supported tools जोड़ें।">Connect suitable forms, spreadsheets and supported tools to reduce manual steps.</p></article>
   </div>
-</section>
-
-<section>
-  <h2 id="why-title">Why Choose Us</h2>
-  <div class="grid">
-    <div class="card"><h3>Fast Setup</h3><p id="w1">Quick implementation with minimal downtime.</p></div>
-    <div class="card"><h3>24/7 Support</h3><p id="w2">Reliable support whenever your business needs help.</p></div>
-    <div class="card"><h3>Affordable</h3><p id="w3">High-value automation at business-friendly pricing.</p></div>
-    <div class="card"><h3>Custom Solutions</h3><p id="w4">Tailored workflows built for your business goals.</p></div>
+</div></section>
+<section id="process"><div class="wrap">
+  <div class="sectiontop"><div><div class="kicker" data-en="HOW IT WORKS" data-hi="कैसे काम करता है">HOW IT WORKS</div><h2 data-en="From busywork to <span class='gradient'>better workflow.</span>" data-hi="बार-बार के काम से <span class='gradient'>बेहतर वर्कफ़्लो तक।</span>">From busywork to <span class="gradient">better workflow.</span></h2></div><p class="sub" data-en="A simple, collaborative process with a setup tailored to your actual needs." data-hi="आपकी जरूरतों के अनुसार एक आसान और मिलकर किया जाने वाला प्रोसेस।">A simple, collaborative process with a setup tailored to your actual needs.</p></div>
+  <div class="steps">
+    <div class="step"><div class="stepno">STEP 01</div><h3 data-en="Share your needs" data-hi="अपनी जरूरत बताएं">Share your needs</h3><p data-en="Tell us about your business and the tasks you want to simplify." data-hi="अपने बिजनेस और उन कामों के बारे में बताएं जिन्हें आसान बनाना है।">Tell us about your business and the tasks you want to simplify.</p></div>
+    <div class="step"><div class="stepno">STEP 02</div><h3 data-en="Plan the flow" data-hi="वर्कफ़्लो बनाएं">Plan the flow</h3><p data-en="Agree on the customer journey, tools and scope before implementation." data-hi="सेटअप से पहले customer journey, tools और काम की सीमा तय करें।">Agree on the customer journey, tools and scope before implementation.</p></div>
+    <div class="step"><div class="stepno">STEP 03</div><h3 data-en="Build & test" data-hi="बनाएं और टेस्ट करें">Build & test</h3><p data-en="Configure the agreed workflow and test key scenarios together." data-hi="तय किए गए वर्कफ़्लो को सेट करें और जरूरी स्थितियों में टेस्ट करें।">Configure the agreed workflow and test key scenarios together.</p></div>
+    <div class="step"><div class="stepno">STEP 04</div><h3 data-en="Improve over time" data-hi="धीरे-धीरे बेहतर बनाएं">Improve over time</h3><p data-en="Review what works and refine the process as your business changes." data-hi="क्या काम कर रहा है देखें और बिजनेस के साथ प्रोसेस बेहतर करें।">Review what works and refine the process as your business changes.</p></div>
   </div>
-</section>
-
-<section>
-  <h2 id="results-title">Client Results</h2>
-  <div class="grid">
-    <div class="card stats">80% Faster Response Time</div>
-    <div class="card stats">3x More Lead Capture</div>
-    <div class="card stats">24/7 Customer Handling</div>
-  </div>
-</section>
-
-<section>
-  <h2 id="global-title">Serving Clients Globally</h2>
-  <div class="card" style="text-align:center;">
-    <p id="global-text">We work with businesses in India and international markets to automate customer communication and increase conversions.</p>
-  </div>
-</section>
-
-<section style="text-align:center;">
-  <h2 id="cta-title">Ready to Automate Your Business?</h2>
-  <a class="btn btn-primary" id="cta-btn" href="https://wa.me/919783099290?text=Hi%20I%20want%20to%20automate%20my%20business" target="_blank">Automate My Business</a>
-</section>
-
-<footer>
-  <p id="footer-text">© 2026 Bhambu Digital Hub | WhatsApp Automation Agency</p>
-  <div class="socials">
-    <a href="https://instagram.com/bhambu_digital_hub" target="_blank">Instagram</a>
-    <a href="mailto:anilbhambu56@gmail.com">anilbhambu56@gmail.com</a>
-  </div>
-</footer>
-
-<a class="float" href="https://wa.me/919783099290?text=Hi%20I%20need%20details%20about%20Bhambu%20Digital%20Hub" target="_blank">💬 Chat</a>
-
+</div></section>
+<section><div class="wrap"><div class="cta" id="contact"><div><div class="kicker" data-en="LET'S BUILD SOMETHING USEFUL" data-hi="चलिए कुछ उपयोगी बनाते हैं">LET'S BUILD SOMETHING USEFUL</div><h2 data-en="Ready to make work <span class='gradient'>simpler?</span>" data-hi="क्या काम को <span class='gradient'>आसान बनाना है?</span>">Ready to make work <span class="gradient">simpler?</span></h2><p data-en="Tell us what slows your business down. We’ll discuss a practical automation approach and the right next step—no made-up promises." data-hi="बताएं कि आपके बिजनेस में कौन-सा काम समय लेता है। हम व्यावहारिक automation और अगले कदम पर बात करेंगे।">Tell us what slows your business down. We’ll discuss a practical automation approach and the right next step—no made-up promises.</p></div><a class="btn primary" href="https://wa.me/919783099290?text=Hi%20Bhambu%20Digital%20Hub%2C%20I%27d%20like%20to%20discuss%20my%20business%20automation%20needs." target="_blank" rel="noopener noreferrer" data-en="Chat on WhatsApp ↗" data-hi="WhatsApp पर बात करें ↗">Chat on WhatsApp ↗</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="footin"><a class="brand" href="#home"><span class="logo">BDH</span><span>BHAMBU<small>DIGITAL HUB</small></span></a><div class="socials"><a href="https://instagram.com/bhambu_digital_hub" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="mailto:anilbhambu56@gmail.com">Email us ↗</a><a href="#services" data-en="Services" data-hi="सेवाएं">Services</a></div><span>© 2026 Bhambu Digital Hub</span></div><p class="note" data-en="Service scope, integrations and timelines are confirmed individually before work begins." data-hi="काम शुरू होने से पहले सेवाओं, integrations और समय-सीमा की पुष्टि की जाती है।">Service scope, integrations and timelines are confirmed individually before work begins.</p></div></footer>
+<a class="btn primary floating" href="https://wa.me/919783099290?text=Hi%20Bhambu%20Digital%20Hub%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer">◉ <span data-en="Let's talk" data-hi="बात करें">Let's talk</span></a>
 <script>
-  let hindi = false;
-
-  function toggleLanguage() {
-    hindi = !hindi;
-
-    if (hindi) {
-      document.getElementById("hero-title").innerText = "WhatsApp से अपने बिजनेस को ऑटोमेट करें";
-      document.getElementById("hero-text").innerText = "हम आपके बिजनेस के लिए WhatsApp chatbot, lead generation और customer support automation सेटअप करते हैं।";
-      document.getElementById("hero-btn1").innerText = "Free Demo बुक करें";
-      document.getElementById("hero-btn2").innerText = "Instagram पर Follow करें";
-      document.getElementById("services-title").innerText = "हमारी सेवाएं";
-      document.getElementById("why-title").innerText = "हमें क्यों चुनें";
-      document.getElementById("results-title").innerText = "Client Results";
-      document.getElementById("global-title").innerText = "हम Global Clients के साथ काम करते हैं";
-      document.getElementById("global-text").innerText = "हम India और international businesses के लिए automation solutions provide करते हैं।";
-      document.getElementById("cta-title").innerText = "क्या आप अपना बिजनेस ऑटोमेट करना चाहते हैं?";
-      document.getElementById("cta-btn").innerText = "मेरा बिजनेस ऑटोमेट करें";
-      document.getElementById("footer-text").innerText = "© 2026 Bhambu Digital Hub | WhatsApp Automation Agency";
-    } else {
-      location.reload();
-    }
-  }
+(() => {
+  const langBtn = document.getElementById('langBtn');
+  const menuBtn = document.getElementById('menuBtn');
+  const navlinks = document.getElementById('navlinks');
+  let language = 'en';
+  langBtn.addEventListener('click', () => {
+    language = language === 'en' ? 'hi' : 'en';
+    document.documentElement.lang = language;
+    document.querySelectorAll('[data-en][data-hi]').forEach(el => {
+      el.innerHTML = el.dataset[language];
+    });
+    langBtn.textContent = language === 'en' ? 'हिंदी' : 'English';
+    langBtn.setAttribute('aria-label', language === 'en' ? 'Switch to Hindi' : 'Switch to English');
+  });
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navlinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+  navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navlinks.classList.remove('open')));
+})();
 </script>
-
 </body>
 </html>
-      
